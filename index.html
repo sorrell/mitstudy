@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deconstructing the "95% AI Failure" Myth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+        }
+
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            border-bottom: 3px solid #4a4a6a;
+        }
+
+        .slide:last-child {
+            border-bottom: none;
+        }
+
+        .slide-number {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .feature-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .feature-content img {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        .notes {
+            background: #2a2a4a;
+            border-radius: 8px;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #ccc;
+            border-left: 4px solid #5c6bc0;
+        }
+
+        .notes h3 {
+            color: #8e99f3;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .notes ul {
+            margin-left: 1.2rem;
+        }
+
+        .notes li {
+            margin-bottom: 0.5rem;
+        }
+
+        .notes .highlight {
+            color: #ffcc80;
+            font-weight: 600;
+        }
+
+        .notes .stat {
+            color: #81c784;
+            font-weight: 600;
+        }
+
+        .notes .critical {
+            color: #ef9a9a;
+            font-weight: 600;
+        }
+
+        .subnote {
+            font-style: italic;
+            color: #999;
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #666;
+        }
+
+        nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 100;
+        }
+
+        nav a {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4a4a6a;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background: #8e99f3;
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 1rem;
+            }
+
+            .notes {
+                font-size: 0.75rem;
+                padding: 1rem;
+            }
+
+            nav {
+                right: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#slide1" title="Slide 1"></a>
+        <a href="#slide2" title="Slide 2"></a>
+        <a href="#slide3" title="Slide 3"></a>
+    </nav>
+
+    <section class="slide" id="slide1">
+        <div class="slide-number">Slide 1 of 3</div>
+        <div class="feature-content">
+            <img src="assets/mitstudy.png" alt="MIT Study: The Pilot-to-Production Chasm">
+        </div>
+        <div class="notes">
+            <h3>Speaker Notes</h3>
+            <ul>
+                <li><span class="highlight">Only 20% of organizations actually piloted!</span> With 52 total orgs in sample: ~10 actually piloted task-specific tools (most didn't try), ~3 succeeded (30% success rate among those who tried)</li>
+                <li><span class="critical">3 out of 52 (5%) sounds dramatic</span>, yet the real number is <span class="stat">3 out of 10</span></li>
+                <li>The data is derived from ~50 executive interviews &mdash; an <span class="critical">extremely small sample size</span></li>
+                <li>No telling how executives defined "GenAI" themselves. AI "initiatives" can have very broad definitions &mdash; many people actually mean "automation" when they say "AI"</li>
+                <li class="subnote">Have you ever talked to executives so removed from their teams that they misreport? I know I have...</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" id="slide2">
+        <div class="slide-number">Slide 2 of 3</div>
+        <div class="feature-content">
+            <img src="assets/slide1.jpeg" alt="Deconstructing the 95% AI Failure Myth">
+        </div>
+        <div class="notes">
+            <h3>Speaker Notes</h3>
+            <ul>
+                <li><span class="highlight">They're counting "didn't try" as "tried and failed."</span></li>
+                <li>It's like claiming <span class="critical">"95% of Americans failed to climb Mount Everest"</span> while counting everyone who never attempted it as a failure</li>
+                <li>This is <span class="stat">completely normal for enterprise software</span> &mdash; most initiatives don't make it past investigation</li>
+                <li>The real success rate among those who actually piloted: <span class="stat">~30%</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" id="slide3">
+        <div class="slide-number">Slide 3 of 3</div>
+        <div class="feature-content">
+            <img src="assets/slide2.jpeg" alt="The Reality of Pilots and The Power of a Single Win">
+        </div>
+        <div class="notes">
+            <h3>Speaker Notes</h3>
+            <ul>
+                <li>Having seen and been part of (via a failed startup) GenAI changes in freight, <span class="highlight">pilots have interesting definitions and purposes</span> depending on the company:</li>
+                <li><span class="stat">Subsidized learning:</span> Many companies reap enormous financial benefits through "extended pilots" where VC-funded startups subsidize costs</li>
+                <li><span class="stat">Capability building:</span> Many companies utilize pilot stages to "steal" ideas and build capability internally</li>
+                <li><span class="highlight">There ARE meaningful gains</span> &mdash; the report cites this:
+                    <ul>
+                        <li>BPO elimination yielded <span class="stat">$2-10M annually</span></li>
+                        <li><span class="stat">30% spend decrease</span> in creative/content agency work</li>
+                        <li><span class="stat">$1M annual savings</span> via financial services risk management</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // Highlight active nav dot based on scroll position
+        const slides = document.querySelectorAll('.slide');
+        const navLinks = document.querySelectorAll('nav a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        slides.forEach(slide => observer.observe(slide));
+    </script>
+</body>
+</html>
